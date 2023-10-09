@@ -19,7 +19,7 @@ services:
             - '${PORT}:${PORT}'
         volumes:
             - ~/.flowise:/root/.flowise
-            - shared_files:/root/.flowise/files
+            - shared_files:/data
         command: /bin/sh -c "sleep 3; flowise start"
 volumes:
     shared_files:
