@@ -24,5 +24,8 @@ ENV PORT=80
 # Expose the specified port
 EXPOSE ${PORT}
 
+# Create the required directory
+RUN mkdir -p /root/.flowise/files
+
 # Start the application with a delay
 CMD /bin/sh -c "sleep 3; flowise start"
