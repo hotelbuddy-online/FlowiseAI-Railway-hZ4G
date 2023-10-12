@@ -24,8 +24,8 @@ WORKDIR /data
 # Expose the specified port
 EXPOSE ${PORT}
 
-# Create the required directory
-# RUN mkdir -p /root/.flowise/files
+# Copy the info file
+RUN cp info.txt /data
 
 # Start the application with a delay
 CMD /bin/sh -c "sleep 3; flowise start"
