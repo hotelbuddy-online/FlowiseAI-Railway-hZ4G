@@ -25,7 +25,7 @@ WORKDIR /data
 EXPOSE ${PORT}
 
 # Copy the info file
-RUN cp info.txt /data
+COPY info.txt /data/
 
 # Start the application with a delay
 CMD /bin/sh -c "sleep 3; flowise start"
